@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background: #f9f9f9;
     padding: 20px;
@@ -132,4 +132,190 @@ body {
     color: red;
     font-size: 0.9em;
     margin-top: 5px;
+  } */
+
+  /* Background & font */
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+/* Container styling */
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  max-width: 900px;
+  margin: auto;
+  animation: fadeInDown 1s ease forwards;
+}
+
+/* Headings */
+h2.bg-secondary {
+  background-color: #6f42c1 !important;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: slideInLeft 1s ease forwards;
+}
+
+/* Form inputs */
+.form-control {
+  border-radius: 10px;
+  border: none;
+  padding: 0.6rem 1rem;
+  box-shadow: inset 2px 2px 6px rgba(255, 255, 255, 0.15),
+              inset -2px -2px 6px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+  background: #2c2c54;
+  color: #fff;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 8px #b48aff;
+  background: #403e66;
+  outline: none;
+  color: #fff;
+}
+
+/* Buttons */
+.btn-secondary {
+  background-color: #6f42c1;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(111, 66, 193, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #8a63d2;
+  box-shadow: 0 6px 20px rgba(138, 99, 210, 0.7);
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #51d36a;
+  box-shadow: 0 6px 20px rgba(81, 211, 106, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: fadeInUp 1s ease forwards;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+thead {
+  background: #6f42c1;
+}
+
+thead th {
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 15px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+tbody tr {
+  background: #403e66;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+tbody tr:nth-child(even) {
+  background: #322f54;
+}
+
+tbody tr:hover {
+  background-color: #5a54a4;
+}
+
+tbody td {
+  padding: 12px 15px;
+  text-align: center;
+  color: #ddd;
+  font-weight: 500;
+}
+
+/* Select inputs */
+.form-select {
+  border-radius: 12px;
+  border: none;
+  background: #2c2c54;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  box-shadow: inset 2px 2px 6px rgba(255,255,255,0.1),
+              inset -2px -2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.form-select:hover {
+  background-color: #403e66;
+}
+
+/* Theme toggle & language */
+.theme-toggle {
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

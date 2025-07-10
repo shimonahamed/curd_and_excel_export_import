@@ -27,8 +27,21 @@
               <option value="bn">🇧🇩 বাংলা</option>
             </select>
         </div>
-      
+        <div class="col-md-3">
+          <label for="rowsPerPageSelect">📄 Rows per page:</label>
+          <select id="rowsPerPageSelect" class="form-select">
+            <option value="5" >Page(5)</option>
+            <option value="10">Page(10)</option>
+            <option value="15" selected>Page(15)</option>
+            <option value="20">Page(20)</option>
+            <option value="50">Page(50)</option>
+            <option value="100">Page(100)</option>
+            <option value="200">Page(200)</option>
+            <option value="500">Page(500)</option>
 
+          </select>
+        </div>
+        
       </div>
 
       <h2 class="bg-secondary">📝 JavaScript CRUD ( PHP, Database)</h2>
@@ -38,47 +51,59 @@
         <input type="hidden" id="user_id">
 
         <div class="row">
-        
-        <div class="form-group col-md-3">
-          <label for="name">Name:</label>
-          <input type="text" id="name" class="form-control" placeholder="Enter Name" required>
+          <div class="col-md-3 mb-2">
+            <label for="name" class="text-white">Name:</label>
+          </div>
+          <div class="form-group col-md-9 mb-2">
+            <input type="text" id="name" class="form-control" placeholder="Enter Name" required>
+          </div>
+          <div class="col-md-3 mb-2">
+            <label for="contact_number" class="text-white">Contact Number:</label>
+          </div>
+          <div class="form-group col-md-9 mb-2">
+            <input type="number" id="contact_number" class="form-control" placeholder="Enter Contact Number" required>
+          </div>
+          <div class="col-md-3 mb-2">
+            <label for="email" class="text-white">Email:</label>
+          </div>
+          <div class="form-group col-md-9 mb-2">
+            <input type="email" id="email" class="form-control" placeholder="Enter Email" required>
+          </div>
         </div>
-        <div class="form-group col-md-3">
-          <label for="email">Email:</label>
-          <input type="email" id="email" class="form-control" placeholder="Enter Email" required>
+        <div class="col-md-3 p-3">
+          <button class="btn btn-secondary" type="submit">💾 Save</button>
         </div>
-      </div>
-      <div class="col-md-3">
-        <button class="btn btn-secondary" type="submit">💾 Save</button>
-        </div>
-      </div>
-
-
-      </form>
-
-      <hr>
-
-      <table id="userTable">
-        <thead>
-          <tr>
-            <th>SL</th>
-            <th>Name</th>
-            <th>Contact Number</th>
-            <th>Email</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody id="userList"></tbody>
-      </table>
     </div>
-    <div>
-      <a href="./table.php" class="btn btn-secondary" >Excel Table</a>
-      <a href="export_excel.php" class="btn btn-success">📥 Export Excel</a>
+    </form>
+    <hr>
+    <table id="userTable">
+      <thead>
+        <tr class="bg-secondary text-white text-center text-uppercase">
+          <th>SL</th>
+          <th>Name</th>
+          <th>Contact Number</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="userList" ></tbody>
+    </table>
+    <div class="row">
+      <div class="col-md-12 p-3">
+        <nav aria-label="Page navigation example ">
+          <ul class="pagination justify-content-start" id="pagination"></ul>
+        </nav>
+      </div>
+  </div>
+</div>
+  <div>
+    <a href="./table.php" class="btn btn-secondary">📥Excel Import Table</a>
+    <a href="export_excel.php" class="btn btn-success"> Export Excel</a>
 
-    
-    </div>
 
-    <script src="script.js"></script>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
